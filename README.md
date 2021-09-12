@@ -30,7 +30,7 @@ In this folder the all code related to the second exercise can be found:
 
 _The task is to detect cones from these videos by drawing bounding boxes over them and putting a text over the bounding box indicating their label (i.e. their colour)_
 
-![display](./multiple_cones_tracking_(exc2)/multiple_cone_tracking/videos/images/demo.jpg)
+![display](./multiple_cones_tracking_(exc2)/multiple_cones_tracking/videos/images/demo.jpg)
 
 
 ### -`utils`

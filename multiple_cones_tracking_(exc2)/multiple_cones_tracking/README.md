@@ -7,7 +7,7 @@ This implementation of cone tracking utilizes a custom-trained haar casacde clas
 To be able to run the main (`main.py`) script, install the required pip packages with `pip install -r requirements.txt`. The main script is only tested on MacOS, but might run on other UNIX systems or Windows as well.
 
 ### Start the tracking
-To start tracking cones the important script is `main.py`. This script needs to be executed with python3.7+ in the `multiple_cone_tracking` directory for all the dependencies to work correctly. In the `main.py` script there are also a set of hyperparameters contained in global variables at the top of the script which can be adjusted to run different streams, improve tracking, save stream, etc.
+To start tracking cones the important script is `main.py`. This script needs to be executed with python3.7+ in the `multiple_cones_tracking` directory for all the dependencies to work correctly. In the `main.py` script there are also a set of hyperparameters contained in global variables at the top of the script which can be adjusted to run different streams, improve tracking, save stream, etc.
 
 ### Workspace Structure
 - `main.py`
