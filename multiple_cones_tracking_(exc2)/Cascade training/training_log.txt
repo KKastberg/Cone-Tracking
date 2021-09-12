@@ -1,0 +1,36 @@
+# HAAR 24x24 1800:900
+opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 1800 -numNeg 900 -numStages 25 -w 24 -h 24 -precalcValBufSize 4096 -precalcIdxBufSize 4096
+
+# HAAR 24x24 3200:1600
+opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 3200 -numNeg 1600 -numStages 25 -w 24 -h 24 -precalcValBufSize 4096 -precalcIdxBufSize 4096 -mode ALL
+
+# HAAR 32x32 1800:900
+opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 1800 -numNeg 900 -numStages 25 -w 32 -h 32 -precalcValBufSize 4096 -precalcIdxBufSize 4096 -mode ALL
+
+# HAAR 32x32 3200:1600
+opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 3200 -numNeg 1600 -numStages 25 -w 32 -h 32 -precalcValBufSize 4096 -precalcIdxBufSize 4096 -mode ALL
+
+# HAAR 32x32 4000:2000 (running FS1)
+opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 4000 -numNeg 2000 -numStages 25 -w 32 -h 32 -precalcValBufSize 4096 -precalcIdxBufSize 4096 -mode ALL
+
+# HAAR 40x40 2000:1000 (running FS2)
+opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 1800 -numNeg 900 -numStages 25 -w 40 -h 40 -precalcValBufSize 4096 -precalcIdxBufSize 4096
+
+# LBP 24x24 1800:900
+opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 1800 -numNeg 900 -numStages 25 -w 24 -h 24 -precalcValBufSize 4096 -precalcIdxBufSize 4096 -mode ALL -featureType LBP
+
+# LBP 32x32 1800:900 (running FS4)
+opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 1800 -numNeg 900 -numStages 25 -w 32 -h 32 -precalcValBufSize 4096 -precalcIdxBufSize 4096 -mode ALL -featureType LBP
+
+# LBP 50x50 3800:1900 (running FS3)
+opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 3800 -numNeg 1900 -numStages 25 -w 50 -h 50 -precalcValBufSize 4096 -precalcIdxBufSize 4096 -mode ALL -featureType LBP
+
+# HAAR 50x50 3800:1900 -64GB (Running FS5)
+opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 3800 -numNeg 1900 -numStages 25 -w 50 -h 50 -precalcValBufSize 32768 -precalcIdxBufSize 32768 -mode ALL
+
+# HAAR 32x32 4000:2000 40 stages (running FS4)
+opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 4000 -numNeg 2000 -numStages 40 -w 32 -h 32 -precalcValBufSize 4096 -precalcIdxBufSize 4096 -mode ALL
+
+
+# HAAR 32x32 3200:1600
+opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 3200 -numNeg 1600 -numStages 10 -w 32 -h 32 -precalcValBufSize 20480 -precalcIdxBufSize 20480 -mode ALL

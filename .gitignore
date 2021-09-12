@@ -1,0 +1,15 @@
+__pycache__
+__pycache__/**
+*.pyc
+*.swp
+.idea
+.idea/**
+.DS_Store
+*.egg-info
+*.venv/
+build/
+*/build/
+dist/
+*/dist/
+#imgui.ini
+#quantum_coding/ocean/**
