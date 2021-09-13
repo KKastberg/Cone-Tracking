@@ -39,11 +39,11 @@ from ColorMasker.ColorMasker import ColorMasker
 # -- General params --
 STREAM_PATH = '../../data/videos/track.mp4'  # Location of video stream
 DRY_RUN = False  # Run without classification
-SAVE_STREAM = True  # Save all frames from the stream
+SAVE_STREAM = False  # Save all frames from the stream
 STREAM_SAVE_PATH = "./videos/output.mp4"  # Saving location of the frames
 STREAM_IN_REDUCED_RESOLUTION = True  # Stream in reduced resolution
 REDUCED_RESOLUTION = (630, 346)  # Reduced resolution
-DISPLAY_UNKNOWN = True  # Display unclassified cones in stream
+DISPLAY_UNKNOWN = False  # Display unclassified cones in stream
 
 # -- Cascade Classifier params --
 CASCADE_XML_PATH = "./CascadeClassifier/trained_cascades/3/cascade.xml"  # Path to the classifier XML

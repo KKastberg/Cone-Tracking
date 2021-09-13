@@ -5,7 +5,7 @@ import glob
 import matplotlib.pyplot as plt
 
 
-DATASET_PATH = "single_cone_images/"  # Path to the images to be classified
+DATASET_PATH = "../data/single_cone_images/"  # Path to the images to be classified
 YELLOW_HSV_RANGE_LOWER = [15, 80, 80]    # HSV bottom threashold for yellow cone classification
 YELLOW_HSV_RANGE_UPPER = [30, 255, 240]  # HSV top threashold for yellow cone classification
 BLUE_HSV_RANGE_LOWER = [30, 100, 120]    # HSV bottom threashold for blue cone classification
@@ -62,35 +62,30 @@ def count_colored_pixels(img, yellow_lower, yellow_upper, blue_lower, blue_upper
 
 # Display all images and each of their blue and yellow pixel masks
 def visualize_performance(df, pixel_data):
+    fig = plt.figure(figsize=(30, 5))
 
-    fig = plt.figure(figsize=(30, 4))
-
-    # Display all the original images in the frame with a title of their filename
+    # Display original images with filename labels
     for idx in range(len(df)):
         fig.add_subplot(1, len(df), idx+1)
-
-        # Load image and adjust for cv2's inverted RGB format
         image = cv2.imread(df["img_path"][idx])
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         np_image = np.asarray(image)
-
-        # Place image in plot
         plt.axis('off')
         name = df["img_path"][idx].split("/")[-1]
         plt.title(name, fontsize=4)
         plt.imshow(np_image)
 
-    # Display the yellow filter masks
+    # Display yellow filter masks
     for idx in range(len(df)):
         fig.add_subplot(2, len(df), idx+1 + len(df))
         plt.axis('off')
-        plt.imshow(pixel_data[idx][2])  # [2] is for yellow_pixel_mask
+        plt.imshow(pixel_data[idx][2])
 
-    # Display the blue filter masks
+    # Display blue filter masks
     for idx in range(len(df)):
         fig.add_subplot(4, len(df), idx+1 + len(df) * 2)
         plt.axis('off')
-        plt.imshow(pixel_data[idx][3])  # [3] is for blue_pixel_mask
+        plt.imshow(pixel_data[idx][3])
 
     plt.show()
 
